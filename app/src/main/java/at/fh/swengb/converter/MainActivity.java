@@ -1,5 +1,6 @@
 package at.fh.swengb.converter;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -41,6 +42,13 @@ public class MainActivity extends AppCompatActivity {
             valueString = String.format("%.6f",value);
             tvResult.setText("Result: "+valueString+" inch");
         }
+
+    }
+    public void showAbout(View view){
+        Intent intent = new Intent(this,DisplayAboutActivity.class);
+        String message = tvResult.getText().toString();
+        intent.putExtra("resultOfConversion",message);
+        startActivity(intent);
 
     }
 }

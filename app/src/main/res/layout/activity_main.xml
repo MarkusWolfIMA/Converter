@@ -42,8 +42,8 @@
                 android:layout_height="match_parent"
                 android:id="@+id/textView2"
                 android:textAlignment="viewStart"
+                android:gravity="start"
                 android:textSize="18sp"
-                android:gravity="center"
                 android:layout_weight="2" />
 
             <EditText
@@ -54,7 +54,8 @@
                 android:id="@+id/etInput"
                 android:layout_weight="1"
                 android:text="0.0"
-                android:textAlignment="textEnd" />
+                android:textAlignment="textEnd"
+                android:gravity = "end"/>
 
             <Spinner
                 android:layout_width="wrap_content"
@@ -95,6 +96,22 @@
                 android:layout_weight="1"
                 android:textSize="18sp" />
         </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="30dp">
+
+        <Button
+            android:text="About"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnAbout"
+            android:layout_weight="1"
+            android:onClick="showAbout" />
+    </LinearLayout>
 
     </LinearLayout>
 
